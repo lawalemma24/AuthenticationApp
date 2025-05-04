@@ -149,15 +149,8 @@ exports.forgotPassword = async (req, res) =>{
             user.resetpasswordTokenExpiresAt = resetTokenExpiresAt;
            
             await user.save();
-            
-
-            
-            
-            
-            
-
             //send email
-            await sendPasswordResetEmail(user.email,`${process.env.CLIENT_URL}/reset-password/${resetToken}`)
+            await sendPasswordResetEmail(user.email,`${process.env.CLIENT_URL}/resetpassword/${resetToken}`)
             res.status(200).json({
                 success: true, message: 'Password reset link sent to your mail',
             })

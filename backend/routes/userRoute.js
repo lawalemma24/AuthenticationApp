@@ -8,7 +8,7 @@ router.get('/check-auth', verifyToken , checkAuth);
 router.post('/signup',signup)
 router.post('/signin',signin)
 router.post('/signout',signout)
-router.post('/verifyemail',verifyEmail)
+router.post('/verify-email',verifyEmail)
 router.post('/forgotpassword',forgotPassword)
 router.post('/resetpassword/:token',resetPassword)
 module.exports = router;
