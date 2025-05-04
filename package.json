@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./backend/app.js",
     "start" : "NODE_ENV=production ./backend/app.js",
-    "build" : "npm install && npm install --prefix client && npm run build --prefix client  "
+    "build" : "npm install && npm install --prefix client && npm run build --prefix client  ",
+    "vercel-build": "npm run build && mv client/build public"
 
   },
   "keywords": [],
